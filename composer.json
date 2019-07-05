@@ -1,6 +1,13 @@
 {
-    "type": "project",
-    "license": "proprietary",
+    "name": "GaryBot",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "description": "Create A Bot Messaging Easier",
+    "keywords": [
+        "Bot",
+        "Chatbot"
+    ],
+    "homepage": "https://github.com/TheGarious/garybot",
     "require": {
         "php": "^7.1.3",
         "ext-ctype": "*",
@@ -9,9 +16,18 @@
         "symfony/dotenv": "4.3.*",
         "symfony/flex": "^1.3.1",
         "symfony/framework-bundle": "4.3.*",
+        "symfony/orm-pack": "^1.0",
         "symfony/yaml": "4.3.*"
     },
+    "authors": [
+        {
+            "name": "Gary Houbre",
+            "email": "gary.houbre@gmail.com"
+        }
+    ],
+
     "require-dev": {
+        "symfony/phpunit-bridge": "^4.3"
     },
     "config": {
         "preferred-install": {
@@ -21,12 +37,12 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "GaryBot\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests/"
+            "GaryBot\\Tests\\": "tests/"
         }
     },
     "replace": {
@@ -54,7 +70,7 @@
     },
     "extra": {
         "symfony": {
-            "allow-contrib": false,
+            "allow-contrib": true,
             "require": "4.3.*"
         }
     }
