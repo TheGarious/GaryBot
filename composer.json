@@ -27,6 +27,7 @@
     ],
 
     "require-dev": {
+        "php-coveralls/php-coveralls": "^2.1",
         "symfony/phpunit-bridge": "^4.3"
     },
     "config": {
