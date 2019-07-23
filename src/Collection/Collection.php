@@ -25,6 +25,17 @@ class Collection implements ArrayAccess, Countable, JsonSerializable
 	 */
 	protected $items = [];
 
+	/**
+	 * Create a new collection.
+	 *
+	 * @param  mixed  $items
+	 * @return void
+	 */
+	public function __construct($items = [])
+	{
+		$this->items = $this->getArrayableItems($items);
+	}
+
 
 	/**
 	 * Get an item at a given offset.
@@ -111,5 +122,42 @@ class Collection implements ArrayAccess, Countable, JsonSerializable
 	{
 		unset($this->items[$key]);
 	}
-	
+
+	/**
+	 * Results array of items from Collection or Arrayable.
+	 * TODO use : php-ds.
+	 * @param  mixed  $items
+	 * @return array
+	 */
+	protected function getArrayableItems($items)
+	{
+		if (is_array($items)) {
+			return $items;
+		} elseif ($items instanceof self) {
+			return $items->all();
+		} elseif ($items instanceof Arrayable) {
+			return $items->toArray();
+		} elseif ($items instanceof Jsonable) {
+			return json_decode($items->toJson(), true);
+		} elseif ($items instanceof JsonSerializable) {
+			return $items->jsonSerialize();
+		} elseif ($items instanceof Traversable) {
+			return iterator_to_array($items);
+		}
+
+		return (array) $items;
+	}
+
+	/**
+	 * Create a new collection instance if the value isn't one already.
+	 *
+	 * @param  mixed  $items
+	 * @return static
+	 */
+	public static function make($items = [])
+	{
+		return new static($items);
+	}
+
+
 }

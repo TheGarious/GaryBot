@@ -3,8 +3,8 @@
 namespace GaryBot\Messages;
 
 use GaryBot\Commands\Command;
+use GaryBot\Drivers\DriverInterface;
 use GaryBot\Messages\Incoming\Answer;
-use GaryBot\Interfaces\DriverInterface;
 use GaryBot\Interfaces\Middleware\Matching;
 use GaryBot\Messages\Incoming\IncomingMessage;
 

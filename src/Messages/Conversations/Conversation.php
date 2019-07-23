@@ -4,9 +4,9 @@ namespace GaryBot\Messages\Conversations;
 
 use Closure;
 
-use GaryBot;
+use GaryBot\GaryBot;
 use Spatie\Macroable\Macroable;
-use GaryBot\Interfaces\ShouldQueue;
+
 use GaryBot\Messages\Attachments\Audio;
 use GaryBot\Messages\Attachments\Image;
 use GaryBot\Messages\Attachments\Video;
@@ -35,14 +35,14 @@ abstract class Conversation
      */
     protected $cacheTime;
     /**
-     * @param BotMan $bot
+     * @param GaryBot $bot
      */
-    public function setBot(BotMan $bot)
+    public function setBot(GaryBot $bot)
     {
         $this->bot = $bot;
     }
     /**
-     * @return BotMan
+     * @return GaryBot
      */
     public function getBot()
     {

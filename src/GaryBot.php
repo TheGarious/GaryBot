@@ -4,6 +4,7 @@ namespace GaryBot;
 
 
 use GaryBot\Cache\CacheInterface;
+use GaryBot\Commands\ConversationManager;
 use GaryBot\Drivers\DriverInterface;
 use GaryBot\Messages\Incoming\IncomingMessage;
 use GaryBot\Messages\Matcher;
@@ -32,7 +33,7 @@ class GaryBot
 		$this->storage = $storage;
 		$this->matcher = new Matcher();
 		$this->middleware = new MiddlewareManager($this);
-		//$this->conversationManager = new ConversationManager();
+		$this->conversationManager = new ConversationManager();
 		//$this->exceptionHandler = new ExceptionHandler();
 	}
 
