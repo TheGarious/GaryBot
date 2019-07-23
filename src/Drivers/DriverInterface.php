@@ -1,7 +1,8 @@
 <?php
 
-namespace GaryBot\Interfaces;
+namespace GaryBot\Drivers;
 
+use GaryBot\Interfaces\UserInterface;
 use Symfony\Component\HttpFoundation\Response;
 use GaryBot\Messages\Incoming\IncomingMessage;
 

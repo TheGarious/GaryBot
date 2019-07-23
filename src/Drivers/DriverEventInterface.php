@@ -1,6 +1,6 @@
 <?php
 
-namespace GaryBot\Interfaces;
+namespace GaryBot\Drivers;
 
 interface DriverEventInterface
 {

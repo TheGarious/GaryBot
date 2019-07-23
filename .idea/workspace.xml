@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8dd4cdc-db6d-4666-9557-68b926fad18c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/GaryBotFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Storages/Drivers/FileStorage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Storages/Drivers/RedisStorage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Storages/Storage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Storages/StorageInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cache/ArrayCache.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cache/ArrayCache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cache/CacheInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cache/CacheInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cache/DoctrineCache.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cache/DoctrineCache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cache/Psr6Cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cache/Psr6Cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GaryBot.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GaryBot.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/CacheInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Drivers/DriverManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Drivers/Events/GenericEvent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Drivers/HttpDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Drivers/NullDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Drivers/Tests/FakeDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Drivers/Tests/ProxyDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Http/Curl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Http/HttpInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaces/UserInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaces/VerifiesService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/DriverEventInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Drivers/DriverEventInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/DriverInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Drivers/DriverInterface.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,99 +29,100 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Collection/Collection.php">
+        <entry file="file://$PROJECT_DIR$/src/Drivers/Tests/FakeDriver.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+            <state relative-caret-position="-3036">
+              <caret line="2" selection-start-line="2" selection-end-line="3" />
               <folding>
-                <element signature="e#120#134#0#PHP" expanded="true" />
+                <element signature="e#42#78#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Storages/Drivers/RedisStorage.php">
+        <entry file="file://$PROJECT_DIR$/src/Drivers/Tests/ProxyDriver.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="115" column="23" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
+            <state relative-caret-position="1005">
+              <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
               <folding>
-                <element signature="e#50#84#0#PHP" expanded="true" />
+                <element signature="e#42#78#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Messages/Attachments/Contact.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cache/DoctrineCache.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Cache/Psr6Cache.php">
+        <entry file="file://$PROJECT_DIR$/src/Drivers/HttpDriver.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GaryBot.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+            <state relative-caret-position="-293">
+              <caret line="37" column="84" selection-start-line="37" selection-start-column="84" selection-end-line="37" selection-end-column="84" />
               <folding>
-                <element signature="e#28#61#0#PHP" expanded="true" />
+                <element signature="e#36#70#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cache/ArrayCache.php">
+        <entry file="file://$PROJECT_DIR$/src/Drivers/NullDriver.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+            <state relative-caret-position="180">
+              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+              <folding>
+                <element signature="e#41#72#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Storages/Drivers/FileStorage.php">
+        <entry file="file://$PROJECT_DIR$/src/Drivers/DriverInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+              <folding>
+                <element signature="e#35#72#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Drivers/DriverManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="181" column="24" lean-forward="true" selection-start-line="181" selection-start-column="24" selection-end-line="181" selection-end-column="24" />
+              <folding>
+                <element signature="e#35#57#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Http/Curl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-726">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Http/HttpInterface.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-              <folding>
-                <element signature="e#51#85#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Storages/Storage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="34" lean-forward="true" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Storages/StorageInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -133,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Collection/Collection.php" />
         <option value="$PROJECT_DIR$/src/Cache/CacheInterface.php" />
         <option value="$PROJECT_DIR$/src/Storages/StorageInterface.php" />
@@ -146,6 +147,20 @@
         <option value="$PROJECT_DIR$/src/GaryBotFactory.php" />
         <option value="$PROJECT_DIR$/src/Cache/DoctrineCache.php" />
         <option value="$PROJECT_DIR$/src/Cache/Psr6Cache.php" />
+        <option value="$PROJECT_DIR$/src/Drivers/DriverEventInterface.php" />
+        <option value="$PROJECT_DIR$/src/Interfaces/HttpInterface.php" />
+        <option value="$PROJECT_DIR$/src/Interfaces/VerifiesService.php" />
+        <option value="$PROJECT_DIR$/src/Drivers/NullDriver.php" />
+        <option value="$PROJECT_DIR$/src/Drivers/Events/GenericEvent.php" />
+        <option value="$PROJECT_DIR$/src/Drivers/Tests/FakeDriver.php" />
+        <option value="$PROJECT_DIR$/src/Drivers/Tests/ProxyDriver.php" />
+        <option value="$PROJECT_DIR$/src/Interfaces/UserInterface.php" />
+        <option value="$PROJECT_DIR$/src/Http/HttpInterface.php" />
+        <option value="$PROJECT_DIR$/src/Http/Curl.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/src/Drivers/DriverInterface.php" />
+        <option value="$PROJECT_DIR$/src/Drivers/DriverManager.php" />
+        <option value="$PROJECT_DIR$/src/Drivers/HttpDriver.php" />
       </list>
     </option>
   </component>
@@ -221,6 +236,7 @@
       <path value="$PROJECT_DIR$/vendor/react/dns" />
       <path value="$PROJECT_DIR$/vendor/react/http" />
       <path value="$PROJECT_DIR$/vendor/react/promise-timer" />
+      <path value="$PROJECT_DIR$/vendor/spatie/macroable" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
@@ -251,32 +267,19 @@
               <item name="GaryBot" type="b2602c69:ProjectViewProjectNode" />
               <item name="GaryBot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Cache" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GaryBot" type="b2602c69:ProjectViewProjectNode" />
               <item name="GaryBot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Collection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GaryBot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GaryBot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+              <item name="Interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GaryBot" type="b2602c69:ProjectViewProjectNode" />
               <item name="GaryBot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Storages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GaryBot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GaryBot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Storages" type="462c0819:PsiDirectoryNode" />
-              <item name="Drivers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -292,12 +295,15 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Http" />
+      <recent name="$PROJECT_DIR$/src/Drivers" />
       <recent name="$PROJECT_DIR$/src/Cache" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Storages" />
       <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/Interfaces" />
+      <recent name="$PROJECT_DIR$/src/Storages" />
       <recent name="$PROJECT_DIR$/src/Cache" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -324,12 +330,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1563808891320</updated>
-      <workItem from="1563808892463" duration="4575000" />
+      <workItem from="1563808892463" duration="5421000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4575000" />
+    <option name="totallyTimeSpent" value="5421000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="298" y="175" width="1389" height="781" extended-state="0" />
@@ -409,13 +415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-738" />
@@ -437,14 +436,14 @@
     <entry file="file://$PROJECT_DIR$/src/Storages/Storage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="34" lean-forward="true" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cache/ArrayCache.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -518,7 +517,126 @@
     <entry file="file://$PROJECT_DIR$/src/Cache/Psr6Cache.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Messages/Conversations/Conversation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="85" column="55" lean-forward="true" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="55" />
+          <folding>
+            <element signature="e#50#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interfaces/VerifiesService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Drivers/Events/GenericEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Drivers/DriverEventInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interfaces/UserInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Drivers/Tests/ProxyDriver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
+          <folding>
+            <element signature="e#42#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Drivers/Tests/FakeDriver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3036">
+          <caret line="2" selection-start-line="2" selection-end-line="3" />
+          <folding>
+            <element signature="e#42#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Http/HttpInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Http/Curl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-726">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Drivers/DriverInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+          <folding>
+            <element signature="e#35#72#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Drivers/DriverManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="181" column="24" lean-forward="true" selection-start-line="181" selection-start-column="24" selection-end-line="181" selection-end-column="24" />
+          <folding>
+            <element signature="e#35#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Drivers/NullDriver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="e#41#72#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Drivers/HttpDriver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-293">
+          <caret line="37" column="84" selection-start-line="37" selection-start-column="84" selection-end-line="37" selection-end-column="84" />
+          <folding>
+            <element signature="e#36#70#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
