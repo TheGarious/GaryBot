@@ -14,10 +14,12 @@
         "ext-curl": "*",
         "ext-iconv": "*",
         "ext-json": "*",
-        "phpunit/phpunit": "^8.2",
-        "symfony/http-foundation": "^4.3",
         "doctrine/cache": "^1.6",
-        "symfony/cache": "^3.1"
+        "phpunit/phpunit": "^8.2",
+        "react/event-loop": "^1.1",
+        "react/http": "^0.8.4",
+        "symfony/cache": "^3.1",
+        "symfony/http-foundation": "^4.3"
     },
     "authors": [
         {
