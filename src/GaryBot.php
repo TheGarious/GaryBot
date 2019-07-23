@@ -10,6 +10,7 @@ use GaryBot\Messages\Incoming\IncomingMessage;
 use GaryBot\Messages\Matcher;
 use GaryBot\Middleware\MiddlewareManager;
 use GaryBot\Storages\StorageInterface;
+use Symfony\Component\Debug\ExceptionHandler;
 
 /**
  * Class BotMan.
@@ -34,7 +35,7 @@ class GaryBot
 		$this->matcher = new Matcher();
 		$this->middleware = new MiddlewareManager($this);
 		$this->conversationManager = new ConversationManager();
-		//$this->exceptionHandler = new ExceptionHandler();
+		$this->exceptionHandler = new ExceptionHandler();
 	}
 
 }

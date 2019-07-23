@@ -2,6 +2,7 @@
 
 namespace GaryBot\Drivers;
 
+use GaryBot\Collection\Collection;
 use GaryBot\Http\Curl;
 use GaryBot\Http\HttpInterface;
 use GaryBot\Interfaces\VerifiesService;
