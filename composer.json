@@ -14,6 +14,7 @@
         "ext-curl": "*",
         "ext-iconv": "*",
         "ext-json": "*",
+        "phpunit/phpunit": "^8.2",
         "symfony/http-foundation": "^4.3"
     },
     "authors": [
