@@ -1,9 +1,9 @@
 <?php
 
-namespace GaryBot\Middleware;
+namespace GaryBot\Middleware\Middleware;
 
-use BotMan\BotMan\BotMan;
-use BotMan\BotMan\Messages\Incoming\IncomingMessage;
+use GaryBot\GaryBot;
+use GaryBot\Messages\Incoming\IncomingMessage;
 
 interface Heard
 {
@@ -12,9 +12,9 @@ interface Heard
      *
      * @param IncomingMessage $message
      * @param callable $next
-     * @param BotMan $bot
+     * @param GaryBot $bot
      *
      * @return mixed
      */
-    public function heard(IncomingMessage $message, $next, BotMan $bot);
+    public function heard(IncomingMessage $message, $next, GaryBot $bot);
 }

@@ -4,7 +4,6 @@ namespace GaryBot\Middleware;
 
 use GaryBot;
 use GaryBot\Http\Curl;
-use GaryBot\Interfaces\MiddlewareInterface;
 use GaryBot\Messages\Incoming\IncomingMessage;
 use GaryBot\Http\HttpInterface;
 class ApiAi implements MiddlewareInterface
@@ -57,7 +56,7 @@ class ApiAi implements MiddlewareInterface
     }
     /**
      * Perform the API.ai API call and cache it for the message.
-     * @param  \BotMan\BotMan\Messages\Incoming\IncomingMessage $message
+     * @param  IncomingMessage $message
      * @return \stdClass
      */
     protected function getResponse(IncomingMessage $message)
@@ -76,13 +75,13 @@ class ApiAi implements MiddlewareInterface
     /**
      * Handle a captured message.
      *
-     * @param \BotMan\BotMan\Messages\Incoming\IncomingMessage $message
+     * @param IncomingMessage $message
      * @param BotMan $bot
      * @param $next
      *
      * @return mixed
      */
-    public function captured(IncomingMessage $message, $next, BotMan $bot)
+    public function captured(IncomingMessage $message, $next, GaryBot\GaryBot $bot)
     {
         return $next($message);
     }
@@ -95,7 +94,7 @@ class ApiAi implements MiddlewareInterface
      *
      * @return mixed
      */
-    public function received(IncomingMessage $message, $next, BotMan $bot)
+    public function received(IncomingMessage $message, $next, GaryBot\GaryBot $bot)
     {
         $response = $this->getResponse($message);
         $reply = $response->result->fulfillment->speech ?? '';
@@ -121,7 +120,7 @@ class ApiAi implements MiddlewareInterface
         return $next($message);
     }
     /**
-     * @param \BotMan\BotMan\Messages\Incoming\IncomingMessage $message
+     * @param IncomingMessage $message
      * @param string $pattern
      * @param bool $regexMatched Indicator if the regular expression was matched too
      * @return bool
@@ -137,13 +136,13 @@ class ApiAi implements MiddlewareInterface
     /**
      * Handle a message that was successfully heard, but not processed yet.
      *
-     * @param \BotMan\BotMan\Messages\Incoming\IncomingMessage $message
+     * @param IncomingMessage $message
      * @param BotMan $bot
      * @param $next
      *
      * @return mixed
      */
-    public function heard(IncomingMessage $message, $next, BotMan $bot)
+    public function heard(IncomingMessage $message, $next, GaryBot\GaryBot $bot)
     {
         return $next($message);
     }
@@ -157,7 +156,7 @@ class ApiAi implements MiddlewareInterface
      *
      * @return mixed
      */
-    public function sending($payload, $next, BotMan $bot)
+    public function sending($payload, $next, GaryBot\GaryBot $bot)
     {
         return $next($payload);
     }

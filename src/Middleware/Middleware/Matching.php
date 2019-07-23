@@ -1,7 +1,6 @@
 <?php
 
-namespace GaryBot\Middleware;
-
+namespace GaryBot\Middleware\Middleware;
 use GaryBot\Messages\Incoming\IncomingMessage;
 
 interface Matching

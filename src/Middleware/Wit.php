@@ -2,12 +2,11 @@
 
 namespace GaryBot\Middleware;
 
-use GaryBot;
+use GaryBot\Collection\Collection;
 use GaryBot\Http\Curl;
-use Illuminate\Support\Collection;
-use GaryBot\Interfaces\HttpInterface;
-use GaryBot\Interfaces\MiddlewareInterface;
+use GaryBot\Http\HttpInterface;
 use GaryBot\Messages\Incoming\IncomingMessage;
+use GaryBot\GaryBot;
 
 class Wit implements MiddlewareInterface
 {
@@ -58,7 +57,7 @@ class Wit implements MiddlewareInterface
      *
      * @return mixed
      */
-    public function captured(IncomingMessage $message, $next, BotMan $bot)
+    public function captured(IncomingMessage $message, $next, GaryBot $bot)
     {
         return $next($message);
     }
@@ -71,7 +70,7 @@ class Wit implements MiddlewareInterface
      *
      * @return mixed
      */
-    public function received(IncomingMessage $message, $next, BotMan $bot)
+    public function received(IncomingMessage $message, $next, GaryBot $bot)
     {
         $response = $this->getResponse($message);
         $responseData = Collection::make(json_decode($response->getContent(), true));
@@ -104,12 +103,12 @@ class Wit implements MiddlewareInterface
      * Handle a message that was successfully heard, but not processed yet.
      *
      * @param \GaryBot\Messages\Incoming\IncomingMessage $message
-     * @param BotMan $bot
+     * @param GaryBot $bot
      * @param $next
      *
      * @return mixed
      */
-    public function heard(IncomingMessage $message, $next, BotMan $bot)
+    public function heard(IncomingMessage $message, $next, GaryBot $bot)
     {
         return $next($message);
     }
@@ -118,12 +117,12 @@ class Wit implements MiddlewareInterface
      * hits the message service.
      *
      * @param mixed $payload
-     * @param BotMan $bot
+     * @param GaryBot $bot
      * @param $next
      *
      * @return mixed
      */
-    public function sending($payload, $next, BotMan $bot)
+    public function sending($payload, $next, GaryBot $bot)
     {
         return $next($payload);
     }

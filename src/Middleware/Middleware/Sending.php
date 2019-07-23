@@ -1,6 +1,6 @@
 <?php
 
-namespace GaryBot\Middleware;
+namespace GaryBot\Middleware\Middleware;
 
 use GaryBot\GaryBot;
 

@@ -1,6 +1,8 @@
 <?php
 
-namespace BotMan\BotMan\Middleware;
+namespace GaryBot\Middleware;
+
+use GaryBot\Middleware\ApiAi;
 
 /**
  * Duplicate of ApiAi, but the product got renamed.
