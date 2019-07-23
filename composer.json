@@ -1,5 +1,5 @@
 {
-    "name": "GaryBot",
+    "name": "thegarious/garybot",
     "type": "symfony-bundle",
     "license": "MIT",
     "description": "Create A Bot Messaging Easier",
