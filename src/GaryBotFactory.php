@@ -4,6 +4,8 @@ namespace GaryBot;
 
 use GaryBot\Cache\ArrayCache;
 use GaryBot\Cache\CacheInterface;
+use GaryBot\Drivers\DriverManager;
+use GaryBot\Http\Curl;
 use GaryBot\Storages\Drivers\FileStorage;
 use GaryBot\Storages\StorageInterface;
 use React\EventLoop\LoopInterface;
@@ -97,28 +99,28 @@ class GaryBotFactory
             $storageDriver = new FileStorage(__DIR__);
         }
 
-//        $driverManager = new DriverManager($config, new Curl());
-//
-//        // cré l'instance princiaple
-//        $botman = new GaryBot($cache, DriverManager::loadFromName('Null', $config), $config, $storageDriver);
-//        // le bot run sur un socket
-//        $botman->runsOnSocket(true);
-//
-//		// notreserveur react listn sur connecion
-//        $socket->on('connection', function ($conn) use ($botman, $driverManager) {
-//            $conn->on('data', function ($data) use ($botman, $driverManager) {
-//                $requestData = json_decode($data, true);
-//                $request = new Request($requestData['query'], $requestData['request'], $requestData['attributes'], [], [], [], $requestData['content']);
-//
-//                // instancie le bon driver en fonction de la request
-//                $driver = $driverManager->getMatchingDriver($request);
-//                //$botman->setDriver($driver);
-//               // $botman->listen();
-//            });
-//        });
-        //$socket->listen($port);
+        $driverManager = new DriverManager($config, new Curl());
 
-        //return $botman;
+        // cré l'instance princiaple
+        $botman = new GaryBot($cache, DriverManager::loadFromName('Null', $config), $config, $storageDriver);
+        // le bot run sur un socket
+        $botman->runsOnSocket(true);
+
+		// notreserveur react listn sur connecion
+        $socket->on('connection', function ($conn) use ($botman, $driverManager) {
+            $conn->on('data', function ($data) use ($botman, $driverManager) {
+                $requestData = json_decode($data, true);
+                $request = new Request($requestData['query'], $requestData['request'], $requestData['attributes'], [], [], [], $requestData['content']);
+
+                // instancie le bon driver en fonction de la request
+                $driver = $driverManager->getMatchingDriver($request);
+                //$botman->setDriver($driver);
+               // $botman->listen();
+            });
+        });
+        $socket->listen($port);
+
+        return $botman;
     }
 
     /**

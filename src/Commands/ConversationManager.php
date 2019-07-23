@@ -3,6 +3,7 @@
 namespace GaryBot\Commands;
 
 
+use GaryBot\Collection\Collection;
 use GaryBot\Drivers\DriverInterface;
 use GaryBot\Messages\Attachments\Audio;
 use GaryBot\Messages\Attachments\Contact;
