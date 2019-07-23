@@ -25,7 +25,12 @@
         {
             "name": "Gary Houbre",
             "email": "gary.houbre@gmail.com"
+        },
+        {
+            "name": "Maxime GASTALDO",
+            "email": "maxtor3569@gmail.com"
         }
+
     ],
 
     "require-dev": {
