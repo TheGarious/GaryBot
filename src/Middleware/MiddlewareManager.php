@@ -5,13 +5,8 @@ namespace GaryBot\Middleware;
 use Closure;
 
 use BotMan\BotMan\BotMan;
+use GaryBot\GaryBot;
 use Mpociot\Pipeline\Pipeline;
-use BotMan\BotMan\Interfaces\Middleware\Heard;
-use BotMan\BotMan\Interfaces\Middleware\Sending;
-use BotMan\BotMan\Interfaces\Middleware\Captured;
-use BotMan\BotMan\Interfaces\Middleware\Matching;
-use BotMan\BotMan\Interfaces\Middleware\Received;
-use BotMan\BotMan\Interfaces\MiddlewareInterface;
 
 class MiddlewareManager
 {
@@ -25,9 +20,9 @@ class MiddlewareManager
     protected $heard = [];
     /** @var Sending[] */
     protected $sending = [];
-    /** @var BotMan */
+    /** @var GaryBot */
     protected $botman;
-    public function __construct(BotMan $botman)
+    public function __construct(GaryBot $botman)
     {
         $this->botman = $botman;
     }

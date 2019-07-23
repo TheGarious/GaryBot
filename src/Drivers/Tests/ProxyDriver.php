@@ -5,6 +5,7 @@ namespace GaryBot\Drivers\Tests;
 
 use GaryBot\Drivers\DriverInterface;
 use GaryBot\Drivers\NullDriver;
+use GaryBot\Http\Curl;
 use GaryBot\Messages\Incoming\IncomingMessage;
 use Symfony\Component\HttpFoundation\Request;
 

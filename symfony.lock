@@ -93,6 +93,9 @@
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
+    "mpociot/pipeline": {
+        "version": "1.0.2"
+    },
     "ocramius/package-versions": {
         "version": "1.4.0"
     },

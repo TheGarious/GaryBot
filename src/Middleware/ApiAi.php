@@ -4,10 +4,9 @@ namespace GaryBot\Middleware;
 
 use GaryBot;
 use GaryBot\Http\Curl;
-use GaryBot\Interfaces\HttpInterface;
 use GaryBot\Interfaces\MiddlewareInterface;
 use GaryBot\Messages\Incoming\IncomingMessage;
-
+use GaryBot\Http\HttpInterface;
 class ApiAi implements MiddlewareInterface
 {
     /** @var string */

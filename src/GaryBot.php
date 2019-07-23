@@ -4,7 +4,7 @@ namespace GaryBot;
 
 
 use GaryBot\Cache\CacheInterface;
-use GaryBot\Interfaces\DriverInterface;
+use GaryBot\Drivers\DriverInterface;
 use GaryBot\Messages\Incoming\IncomingMessage;
 use GaryBot\Messages\Matcher;
 use GaryBot\Middleware\MiddlewareManager;
