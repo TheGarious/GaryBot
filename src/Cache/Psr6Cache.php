@@ -3,7 +3,6 @@
 namespace GaryBot\Cache;
 
 use Psr\Cache\CacheItemPoolInterface;
-use GaryBot\Interfaces\CacheInterface;
 
 class Psr6Cache implements CacheInterface
 {

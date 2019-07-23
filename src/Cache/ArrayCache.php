@@ -2,7 +2,6 @@
 
 namespace GaryBot\Cache;
 
-use GaryBot\Interfaces\CacheInterface;
 
 class ArrayCache implements CacheInterface
 {

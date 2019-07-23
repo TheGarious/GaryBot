@@ -3,7 +3,6 @@
 namespace GaryBot\Cache;
 
 use Doctrine\Common\Cache\Cache;
-use GaryBot\Interfaces\CacheInterface;
 
 class DoctrineCache implements CacheInterface
 {
