@@ -3,6 +3,7 @@
 namespace GaryBot\Traits;
 
 use Closure;
+use GaryBot\Collection\Collection;
 use GaryBot\Messages\Conversations\Conversation;
 use GaryBot\Messages\Incoming\IncomingMessage;
 use Opis\Closure\SerializableClosure;

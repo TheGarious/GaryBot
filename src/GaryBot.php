@@ -39,6 +39,8 @@ use Symfony\Component\HttpFoundation\Response;
 class GaryBot
 {
 
+	use HandlesConversations;
+
 	/** @var \Illuminate\Support\Collection */
 	protected $event;
 

@@ -4,8 +4,12 @@ namespace GaryBot\Middleware;
 
 use Closure;
 
-use BotMan\BotMan\BotMan;
 use GaryBot\GaryBot;
+use GaryBot\Middleware\Middleware\Captured;
+use GaryBot\Middleware\Middleware\Heard;
+use GaryBot\Middleware\Middleware\Matching;
+use GaryBot\Middleware\Middleware\Received;
+use GaryBot\Middleware\Middleware\Sending;
 use Mpociot\Pipeline\Pipeline;
 
 class MiddlewareManager
