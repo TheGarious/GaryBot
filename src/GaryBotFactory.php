@@ -65,10 +65,10 @@ class GaryBotFactory
             $storageDriver = new FileStorage(__DIR__);
         }
 
-        //$driverManager = new DriverManager($config, new Curl());
-       // $driver = $driverManager->getMatchingDriver($request);
+        $driverManager = new DriverManager($config, new Curl());
+        $driver = $driverManager->getMatchingDriver($request);
 
-        //return new GaryBot($cache, $driver, $config, $storageDriver);
+        return new GaryBot($cache, $driver, $config, $storageDriver);
     }
 
     /**
@@ -89,7 +89,7 @@ class GaryBotFactory
         $port = isset($config['port']) ? $config['port'] : 8080;
 	    // instanciee le serverr react
 
-        $socket = new Server($loop);
+        $socket = new Server($loop); //normal
 
         if (empty($cache)) {
             $cache = new ArrayCache();

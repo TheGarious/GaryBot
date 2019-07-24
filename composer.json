@@ -19,6 +19,7 @@
         "react/event-loop": "^1.1",
         "react/http": "^0.8.4",
         "symfony/cache": "^3.1",
+        "symfony/debug": "^4.3",
         "symfony/http-foundation": "^4.3"
     },
     "authors": [
